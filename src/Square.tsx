@@ -1,14 +1,14 @@
-import React, { MouseEventHandler } from 'react'
+import { MouseEventHandler } from 'react'
 
 type Props = {
   onClick: MouseEventHandler,
   value: number
 }
 
-const Square: React.FC<Props> = (props) => {
+const Square = ({ onClick, value }: Props) => {
   return (
-    <button className="square" onClick={props.onClick}>
-      {props.value}
+    <button className="square" onClick={onClick}>
+      {value}
     </button>
   )
 }
