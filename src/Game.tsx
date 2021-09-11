@@ -56,7 +56,7 @@ function Game(): JSX.Element {
     const desc = move ? `Go to move #${move}` : 'Go to game start'
     return (
       <li key={move}>
-        <button onClick={() => jumpTo(move)}>{desc}</button>
+        <button type="button" onClick={() => jumpTo(move)}>{desc}</button>
       </li>
     )
   })
