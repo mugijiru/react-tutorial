@@ -1,8 +1,13 @@
 import React from 'react'
 import Square from './Square'
 
-class Board extends React.Component {
-  renderSquare(i) {
+type Props = {
+  squares: string[] | null[],
+  onClick: (i: number) => void
+}
+
+class Board extends React.Component<Props, {}> {
+  renderSquare(i: number) {
     return <Square value={this.props.squares[i]} onClick={() => this.props.onClick(i)}/>;
   }
 
