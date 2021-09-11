@@ -32,15 +32,15 @@ function Game(): JSX.Element {
   const [xIsNext, setXIsNext] = useState<boolean>(true)
 
   const handleClick = (i: number) => {
-    const _history = history.slice(0, stepNumber + 1)
-    const current = _history[_history.length - 1]
+    const historySubset = history.slice(0, stepNumber + 1)
+    const current = historySubset[historySubset.length - 1]
     const squares = current.squares.slice()
     if (calculateWinner(squares) || squares[i]) { return }
 
     squares[i] = xIsNext ? 'X' : 'O'
 
-    setHistory(_history.concat([{ squares }]))
-    setStepNumber(_history.length)
+    setHistory(historySubset.concat([{ squares }]))
+    setStepNumber(historySubset.length)
     setXIsNext(!xIsNext)
   }
 
