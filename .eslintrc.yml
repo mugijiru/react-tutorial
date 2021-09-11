@@ -17,3 +17,5 @@ plugins:
 rules:
   semi: ["error", "never"]
   react/jsx-filename-extension: [1, { "extensions": [".jsx", ".tsx"] }]
+globals:
+  JSX: true
