@@ -5,7 +5,7 @@ type Props = {
   value: string | null
 }
 
-const Square = ({ onClick, value }: Props) => {
+function Square({ onClick, value }: Props): JSX.Element {
   return (
     <button className="square" onClick={onClick}>
       {value}
