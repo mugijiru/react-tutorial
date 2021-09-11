@@ -8,7 +8,7 @@ type Props = {
 
 const Board = ({ squares, onClick }: Props) => {
   const renderSquare = (i: number) => {
-    return <Square value={squares[i]} onClick={() => onClick(i)}/>
+    return <Square value={squares[i]} onClick={() => onClick(i)} />
   }
 
   return (
