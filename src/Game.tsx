@@ -2,7 +2,9 @@ import React from 'react'
 import Board from './Board'
 
 type States = {
-  history: any,
+  history: {
+    squares: string[] | null []
+  }[],
   stepNumber: number,
   xIsNext: boolean
 }
@@ -40,7 +42,7 @@ class Game extends React.Component<{}, States> {
     const current = history[this.state.stepNumber]
     const winner = calculateWinner(current.squares)
 
-    const moves = history.map((_step: number, move: any) => {
+    const moves = history.map((_step, move) => {
       const desc = move ? `Go to move #${move}` : 'Go to game start'
       return (
           <li key={move}>
@@ -69,7 +71,7 @@ class Game extends React.Component<{}, States> {
   }
 }
 
-function calculateWinner(squares: string[]): string | null {
+function calculateWinner(squares: string[] | null[]): string | null {
   const lines = [
     [0, 1, 2],
     [3, 4, 5],
