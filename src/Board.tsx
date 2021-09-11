@@ -3,7 +3,7 @@ import TSquare from './TSquare'
 
 type Props = {
   squares: TSquare[],
-  onClick: (i: number) => void
+  onClick: (i: number) => void // eslint-disable-line no-unused-vars
 }
 
 const Board = ({ squares, onClick }: Props) => {
