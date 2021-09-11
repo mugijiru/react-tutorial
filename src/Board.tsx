@@ -1,7 +1,8 @@
 import Square from './Square'
+import TSquare from './TSquare'
 
 type Props = {
-  squares: string[] | null[],
+  squares: TSquare[],
   onClick: (i: number) => void
 }
 
