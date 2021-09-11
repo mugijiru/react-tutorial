@@ -15,7 +15,7 @@ function Game(): JSX.Element {
     const _history = history.slice(0, stepNumber + 1)
     const current = _history[_history.length - 1]
     const squares = current.squares.slice()
-    if (calculateWinner(squares) || squares[i]) { return}
+    if (calculateWinner(squares) || squares[i]) { return }
 
     squares[i] = xIsNext ? 'X' : 'O'
 
