@@ -54,12 +54,16 @@ function Game(): JSX.Element {
 
   const moves = history.map((_step, move) => {
     const desc = move ? `Go to move #${move}` : 'Go to game start'
+
+    /* eslint-disable react/no-array-index-key */
     return (
       <li key={move}>
         <button type="button" onClick={() => jumpTo(move)}>{desc}</button>
       </li>
     )
+    /* eslint-enable react/no-array-index-key */
   })
+
   let status
   if (winner) {
     status = `Winner: ${winner}`
