@@ -2,7 +2,7 @@ import { MouseEventHandler } from 'react'
 
 type Props = {
   onClick: MouseEventHandler,
-  value: number
+  value: string | null
 }
 
 const Square = ({ onClick, value }: Props) => {
