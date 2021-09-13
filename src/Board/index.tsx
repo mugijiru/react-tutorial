@@ -1,5 +1,5 @@
-import Square from './Square'
-import TSquare from './TSquare'
+import Square from '../Square'
+import TSquare from '../TSquare'
 
 type Props = {
   squares: TSquare[],
