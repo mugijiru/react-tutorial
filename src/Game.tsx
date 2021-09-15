@@ -23,7 +23,7 @@ function calculateWinner(squares: TSquare[]): string | null {
 }
 
 type History = {
-    squares: TSquare[]
+  squares: TSquare[]
 }
 
 function Game(): JSX.Element {
